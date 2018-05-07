@@ -1,0 +1,15 @@
+---
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: java
+   namespace: discover
+   labels:
+     app: java
+ spec:
+   containers:
+     - name: java
+       image: db
+       ports:
+         - containerPort: 8091
+       imagePullPolicy: Never
